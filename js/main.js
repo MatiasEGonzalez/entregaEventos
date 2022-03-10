@@ -8,10 +8,10 @@ class Lista {
         this.nombre = nombre;
         this.precio = parseFloat(precio);
         this.category = category;
-        this.img = imgValor;      
+        this.img = imgValor;
     }
 
-    sumarIva(){
+    sumarIva() {
         this.precio = this.precio * 1.21;
     }
 }
@@ -21,15 +21,12 @@ class Pedido {
         this.comida = comida;
         this.bebida = bebida;
         this.postre = postre;
-        
+
     }
 }
 
-let ordenComida;
-let ordenBebida;
-let ordenPostre;
-
 let contador = 0;
+
 const listaOrdenes = [];
 
 function mostrarEnLista(pedidos) {
@@ -42,15 +39,11 @@ function mostrarEnLista(pedidos) {
         <li>Postre: ${pedidos.postre}</li>
         <img src=${comida.img} class="imagen"/>
         <img src=${bebida.img} class="imagen"/>
-        <img src=${postre.img} class="imagen"/>
-        
-        
+        <img src=${postre.img} class="imagen"/>        
         <br>`
 
     ul.appendChild(contenedor2)
-
 }
-
 
 let listaProductosMenu = "Estos son nuestros productos";
 
@@ -83,190 +76,71 @@ function encontrarOrden() {
 
     console.log(comida, bebida, postre);
 
-
 }
 
+function mostrarTotal(total) {
 
+    let mostrarTotal = document.getElementById("mostrarTotal")
 
-    
+    let contenedor3 = document.createElement("div")
 
-   
+    comida.sumarIva();
 
-    
-    function mostrarTotal(total) {
+    bebida.sumarIva();
 
-        let mostrarTotal = document.getElementById("mostrarTotal")
-        let contenedor3 = document.createElement("div")
-        comida.sumarIva();
+    postre.sumarIva();
 
-        bebida.sumarIva();
-        
-        postre.sumarIva();
-    
-        let totalAbonar = (comida.precio + bebida.precio + postre.precio);
-        contenedor3.innerHTML = `
-            <br>
-            <p>TOTAL:  ${totalAbonar} (IVA INCLUIDO)</p>           
-            <br>`
-    
-        ul.appendChild(contenedor3)
-    
-    }
+    let totalAbonar = (comida.precio + bebida.precio + postre.precio);
 
+    contenedor3.innerHTML = `
+        <br>
+        <p>TOTAL:  ${totalAbonar} (IVA INCLUIDO)</p>           
+        <br>`
 
+    ul.appendChild(contenedor3)
+
+}
 
 let menuCatalogo = document.querySelector('.menuCatalogo');
 
 let renderMenu = document.querySelector('.mostrarMenu');
-renderMenu.addEventListener('click', mostrarMenu)
 
-
+renderMenu.addEventListener('click', mostrarMenu);
 
 let mostrarOrden = document.querySelector('.mostrarOrden');
-mostrarOrden.onclick = () =>{
-    confirmar = confirm("Desea confirmar el pedido?");
+
+mostrarOrden.onclick = () => {
+
+    confirmar = true;
+
     if (confirmar) {
         ordenComida = document.getElementById("ordenComida").value;
         ordenBebida = document.getElementById("ordenBebida").value;
         ordenPostre = document.getElementById("ordenPostre").value;
-        
+
         const pedidos = new Pedido(ordenComida, ordenBebida, ordenPostre);
-       
+
         listaOrdenes.push(pedidos);
 
         encontrarOrden();
+
         mostrarEnLista(pedidos);
+
         mostrarTotal();
     }
 
     console.log(listaOrdenes);
 }
 
-/*
-function ordenNueva(){
-ordenComida = document.getElementById("ordenComida").value;
-ordenBebida = document.getElementById("ordenBebida").value;
-ordenPostre = document.getElementById("ordenPostre").value;
-
-ordenComida.addEventListener('change', () => {
-    console.log(ordenComida.value);
-})
-ordenBebida.addEventListener('change', () => {
-    console.log(ordenBebida.value);
-})
-ordenPostre.addEventListener('change', () => {
-    console.log(ordenPostre.value);
-})
-
-
-
-}
-
-ordenNueva();
-*/
-
-function mostrarMenu(){
+function mostrarMenu() {
     menuCatalogo.innerHTML = '';
     for (const producto of listaProductos) {
         let contenedor = document.createElement("div");
 
         contenedor.innerHTML = `<div class="card">
                                 <h3>${producto.id}) ${producto.nombre} $${producto.precio}</h3>
-                                <img src=${producto.img} class="imagen"/>
-                                <button>Ordenar</button></div>`;
+                                <img src=${producto.img} class="imagen"/>`;
 
         menuCatalogo.appendChild(contenedor);
     }
 }
-
-
-
-
-
-
-function realizarOtraOrden(){
-/*
-    let continuar = prompt("Quiere realizar otra orden?\nsi/no");
-
-    switch (continuar) {
-        case "si":
-            listarProductos();
-
-            orden();
-
-        case "no":
-
-            alert("Su orden estara lista en 15 minutos");
-
-            saludar("Gracias por visitar");
-    }
-*/
-}
-
-function orden() {
-    /*
-    ordenComida = prompt("Que desea pedir para Comer?");
-
-    ordenBebida = prompt("Que desea pedir para Beber?");
-
-    ordenPostre = prompt("Que desea pedir de postre?");
-
-    console.log("Orden a preparar " + ordenComida, ordenBebida, ordenPostre);
-*/
-    encontrarOrden();
-
-    total();
-
-    realizarOtraOrden();
-    
-}
-
-function saludar(saludo) {
-    alert(saludo + " nuestra pagina!");
-}
-
-function listarProductos() {
-    alert(listaProductosMenu);
-}
-
-for (const producto of listaProductos) {
-    contador++;
-    
-    listaProductosMenu += "\n" + contador + "- " + producto.nombre + " $" + producto.precio + " " + producto.category;
-}
-
-function menu() {
-/*
-    let opcion = prompt("Menu: \n1 - Ver productos\nESC - Para Salir");
-
-    switch (opcion) {
-
-        case "1":
-
-            listarProductos();
-
-            listaProductos.forEach((lis) => {
-                console.log(lis.category + "\n" + lis.nombre + " $" + lis.precio)
-            })
-            orden();
-
-            break;
-
-        case "ESC":
-
-            saludar("Gracias por visitar");
-
-            break;
-
-        default:
-
-            alert("Opcion Incorrecta");
-
-            menu();
-
-            break;
-    }
-*/
-}
-
-menu();
