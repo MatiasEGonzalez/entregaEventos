@@ -62,7 +62,7 @@ listaProductos.push(new Lista(2, "milanesas con ensalada", 550, categorias[1], "
 listaProductos.push(new Lista(3, "milanesas con papas fritas", 550, categorias[1], "./img/milanesasConPapasFritas.jpg"));
 listaProductos.push(new Lista(4, "asado con pure", 550, categorias[1], "./img/asadoConPure.jpg"));
 listaProductos.push(new Lista(5, "asado con ensalada", 550, categorias[1], "./img/asadoConEnsalada.jpg"));
-listaProductos.push(new Lista(5, "sopa de verduras", 550, categorias[1], "sopaDeVerduras.jpg"));
+listaProductos.push(new Lista(5, "sopa de verduras", 550, categorias[1], "sopa.jpg"));
 listaProductos.push(new Lista(6, "pastafrola", 150, categorias[0], "./img/pastafrola.jpg"));
 listaProductos.push(new Lista(7, "cafe con leche", 220, categorias[0], "./img/cafeConLeche.jpg"));
 listaProductos.push(new Lista(8, "flan", 170, categorias[2], "./img/flan.jpg"));
