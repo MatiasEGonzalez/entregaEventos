@@ -57,21 +57,21 @@ let listaProductosMenu = "Estos son nuestros productos";
 const listaProductos = [];
 
 listaProductos.push(new Lista(1, "pizza", 600, categorias[1], "./img/pizza.jpg"));
-listaProductos.push(new Lista(1, "milanesas con pure", 550, categorias[1], "./img/milanesaConPure.jpg"));
-listaProductos.push(new Lista(2, "milanesas con ensalada", 550, categorias[1], "./img/milanesaConEnsalada.jpg"));
-listaProductos.push(new Lista(3, "milanesas con papas fritas", 550, categorias[1], "./img/milanesasConPapasFritas.jpg"));
-listaProductos.push(new Lista(4, "asado con pure", 550, categorias[1], "./img/asadoConPure.jpg"));
-listaProductos.push(new Lista(5, "asado con ensalada", 550, categorias[1], "./img/asadoConEnsalada.jpg"));
-listaProductos.push(new Lista(5, "sopa de verduras", 550, categorias[1], "sopa.jpg"));
-listaProductos.push(new Lista(6, "pastafrola", 150, categorias[0], "./img/pastafrola.jpg"));
-listaProductos.push(new Lista(7, "cafe con leche", 220, categorias[0], "./img/cafeConLeche.jpg"));
-listaProductos.push(new Lista(8, "flan", 170, categorias[2], "./img/flan.jpg"));
-listaProductos.push(new Lista(8, "helado", 240, categorias[2], "./img/helado.jpg"));
-listaProductos.push(new Lista(9, "fernet con coca", 450, categorias[3], "./img/fernetConCoca.jpg"));
-listaProductos.push(new Lista(10, "cerveza pinta", 220, categorias[3], "./img/cervezaPinta.jpg"));
-listaProductos.push(new Lista(11, "cerveza botella", 340, categorias[3], "./img/cervezaBotella.jpg"));
-listaProductos.push(new Lista(12, "coca cola", 170, categorias[3], "./img/cocaCola.jpg"));
-listaProductos.push(new Lista(13, "sprite", 170, categorias[3], "./img/sprite.jpg"));
+listaProductos.push(new Lista(2, "milanesas con pure", 550, categorias[1], "./img/milanesaConPure.jpg"));
+listaProductos.push(new Lista(3, "milanesas con ensalada", 550, categorias[1], "./img/milanesaConEnsalada.jpg"));
+listaProductos.push(new Lista(4, "milanesas con papas fritas", 550, categorias[1], "./img/milanesasConPapasFritas.jpg"));
+listaProductos.push(new Lista(5, "asado con pure", 550, categorias[1], "./img/asadoConPure.jpg"));
+listaProductos.push(new Lista(6, "asado con ensalada", 550, categorias[1], "./img/asadoConEnsalada.jpg"));
+listaProductos.push(new Lista(7, "sopa de verduras", 550, categorias[1], "sopa.jpg"));
+listaProductos.push(new Lista(8, "pastafrola", 150, categorias[0], "./img/pastafrola.jpg"));
+listaProductos.push(new Lista(9, "cafe con leche", 220, categorias[0], "./img/cafeConLeche.jpg"));
+listaProductos.push(new Lista(10, "flan", 170, categorias[2], "./img/flan.jpg"));
+listaProductos.push(new Lista(11, "helado", 240, categorias[2], "./img/helado.jpg"));
+listaProductos.push(new Lista(12, "fernet con coca", 450, categorias[3], "./img/fernetConCoca.jpg"));
+listaProductos.push(new Lista(13, "cerveza pinta", 220, categorias[3], "./img/cervezaPinta.jpg"));
+listaProductos.push(new Lista(14, "cerveza botella", 340, categorias[3], "./img/cervezaBotella.jpg"));
+listaProductos.push(new Lista(15, "coca cola", 170, categorias[3], "./img/cocaCola.jpg"));
+listaProductos.push(new Lista(16, "sprite", 170, categorias[3], "./img/sprite.jpg"));
 
 function encontrarOrden() {
 
